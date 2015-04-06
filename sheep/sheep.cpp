@@ -5,10 +5,10 @@
  *      Author: Koe
  */
 
-#include "sheep.h"
 #include <iostream>
-#include<fstream>
+#include <fstream>
 #include <sstream>
+#include "sheep.h"
 
 std::vector<std::string> Sheep::split(const std::string &text, char delim) const
 {

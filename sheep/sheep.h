@@ -9,6 +9,7 @@
 #define SHEEP_SHEEP_H_
 
 #include <vector>
+#include <string>
 
 class Sheep {
 private:
