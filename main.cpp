@@ -15,6 +15,11 @@
 #endif
 
 #if 1
+#define STRING_ROTATION
+#include "string_rotation/stringrotation.h"
+#endif
+
+#if 1
 #define OUTLET
 #include "outlet/outlet.h"
 #endif
@@ -64,6 +69,12 @@ int main(int argc, char *argv[])
 #ifdef MAYAN
 	std::cout << "Mayan:" << std::endl;
 	Mayan m("mayan/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef STRING_ROTATION
+	std::cout << "String Rotation:" << std::endl;
+	StringRotation sr("string_rotation/test.txt");
 	std::cout << std::endl;
 #endif
 
