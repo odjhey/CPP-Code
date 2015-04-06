@@ -9,32 +9,37 @@
 
 #include <iostream>
 
-#if 1
+#if 0
 #define PASCAL
 #include "pascals_triangle/pascals_triangle.h"
 #endif
 
-#if 1
+#if 0
 #define STRING_ROTATION
 #include "string_rotation/stringrotation.h"
 #endif
 
 #if 1
+#define GRONSFELD_CIPHER
+#include "gronsfeld_cipher/gronsfeld.h"
+#endif
+
+#if 0
 #define OUTLET
 #include "outlet/outlet.h"
 #endif
 
-#if 1
+#if 0
 #define SHEEP
 #include "sheep/sheep.h"
 #endif
 
-#if 1
+#if 0
 #define GOLD
 #include "gold/gold.h"
 #endif
 
-#if 1
+#if 0
 #define MAYAN
 #include "mayan/mayan.h"
 #endif
@@ -75,6 +80,12 @@ int main(int argc, char *argv[])
 #ifdef STRING_ROTATION
 	std::cout << "String Rotation:" << std::endl;
 	StringRotation sr("string_rotation/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef GRONSFELD_CIPHER
+	std::cout << "Gronsfeld Cipher:" << std::endl;
+	Gronsfeld gc("gronsfeld_cipher/test.txt");
 	std::cout << std::endl;
 #endif
 
