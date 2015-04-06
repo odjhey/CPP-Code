@@ -29,6 +29,11 @@
 #include "gold/gold.h"
 #endif
 
+#if 1
+#define MAYAN
+#include "mayan/mayan.h"
+#endif
+
 int main(int argc, char *argv[])
 {
 
@@ -53,6 +58,12 @@ int main(int argc, char *argv[])
 #ifdef GOLD
 	std::cout << "Gold:" << std::endl;
 	Gold g("gold/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef MAYAN
+	std::cout << "Mayan:" << std::endl;
+	Mayan m("mayan/test.txt");
 	std::cout << std::endl;
 #endif
 
