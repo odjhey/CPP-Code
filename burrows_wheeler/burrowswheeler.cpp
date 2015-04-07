@@ -19,7 +19,7 @@ BurrowsWheeler::BurrowsWheeler(const char *file)
 
 	while(getline(stream, line))
 	{
-		std::cout << unpack(line, '$') << std::endl;
+		std::cout << unpack(line.substr(0,line.size()-1), '$') << std::endl;
 	}
 }
 
@@ -70,5 +70,5 @@ std::string BurrowsWheeler::unpack(const std::string &bwt, const char char_EOF)
 		std::sort(vec.begin(), vec.end());
 	}
 
-	return vec[decrypted_pos].substr(0, vec[decrypted_pos].size()-1);
+	return vec[decrypted_pos];
 }
