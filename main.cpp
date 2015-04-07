@@ -19,9 +19,14 @@
 #include "string_rotation/stringrotation.h"
 #endif
 
-#if 1
+#if 0
 #define GRONSFELD_CIPHER
 #include "gronsfeld_cipher/gronsfeld.h"
+#endif
+
+#if 1
+#define BURROWS_WHEELER
+#include "burrows_wheeler/burrowswheeler.h"
 #endif
 
 #if 0
@@ -86,6 +91,12 @@ int main(int argc, char *argv[])
 #ifdef GRONSFELD_CIPHER
 	std::cout << "Gronsfeld Cipher:" << std::endl;
 	Gronsfeld gc("gronsfeld_cipher/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef BURROWS_WHEELER
+	std::cout << "Burrows Wheeler:" << std::endl;
+	BurrowsWheeler bw("burrows_wheeler/test.txt");
 	std::cout << std::endl;
 #endif
 
