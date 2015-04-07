@@ -6,7 +6,6 @@
  */
 
 
-
 #include <iostream>
 
 #if 0
@@ -19,7 +18,7 @@
 #include "string_rotation/stringrotation.h"
 #endif
 
-#if 0
+#if 1
 #define GRONSFELD_CIPHER
 #include "gronsfeld_cipher/gronsfeld.h"
 #endif
@@ -27,6 +26,11 @@
 #if 1
 #define BURROWS_WHEELER
 #include "burrows_wheeler/burrowswheeler.h"
+#endif
+
+#if 1
+#define CMP_SEQUENCE
+#include "compressed_sequence/compressedsequence.h"
 #endif
 
 #if 0
@@ -48,6 +52,7 @@
 #define MAYAN
 #include "mayan/mayan.h"
 #endif
+
 
 int main(int argc, char *argv[])
 {
@@ -97,6 +102,12 @@ int main(int argc, char *argv[])
 #ifdef BURROWS_WHEELER
 	std::cout << "Burrows Wheeler:" << std::endl;
 	BurrowsWheeler bw("burrows_wheeler/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef CMP_SEQUENCE
+	std::cout << "Compressed Sequence:" << std::endl;
+	cmpSequence cSeq("compressed_sequence/test.txt");
 	std::cout << std::endl;
 #endif
 
