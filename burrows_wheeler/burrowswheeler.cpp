@@ -27,10 +27,11 @@ std::vector<std::string> BurrowsWheeler::make_rotations(const std::string &text)
 {
 	std::vector<std::string> vec;
 	std::string temp = text + text;
+	std::size_t text_size = text.size();
 
-	for(std::size_t i = 0; i < temp.size() - text.size(); ++i)
+	for(std::size_t i = 0; i < temp.size() - text_size; ++i)
 	{
-		vec.push_back(temp.substr(i, text.size()));
+		vec.push_back(temp.substr(i, text_size));
 	}
 	return vec;
 }
