@@ -18,19 +18,24 @@
 #include "string_rotation/stringrotation.h"
 #endif
 
-#if 1
+#if 0
 #define GRONSFELD_CIPHER
 #include "gronsfeld_cipher/gronsfeld.h"
 #endif
 
-#if 1
+#if 0
 #define BURROWS_WHEELER
 #include "burrows_wheeler/burrowswheeler.h"
 #endif
 
-#if 1
+#if 0
 #define CMP_SEQUENCE
 #include "compressed_sequence/compressedsequence.h"
+#endif
+
+#if 1
+#define ZEROES
+#include "juggling_with_zeros/zeroes.h"
 #endif
 
 #if 0
@@ -108,6 +113,12 @@ int main(int argc, char *argv[])
 #ifdef CMP_SEQUENCE
 	std::cout << "Compressed Sequence:" << std::endl;
 	cmpSequence cSeq("compressed_sequence/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef ZEROES
+	std::cout << "Zeroes:" << std::endl;
+	Zeroes z("juggling_with_zeros/test.txt");
 	std::cout << std::endl;
 #endif
 
