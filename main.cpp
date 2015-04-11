@@ -33,9 +33,14 @@
 #include "compressed_sequence/compressedsequence.h"
 #endif
 
-#if 1
+#if 0
 #define ZEROES
 #include "juggling_with_zeros/zeroes.h"
+#endif
+
+#if 1
+#define SPLITNUMBER
+#include "split_the_number/splitthenumber.h"
 #endif
 
 #if 0
@@ -119,6 +124,12 @@ int main(int argc, char *argv[])
 #ifdef ZEROES
 	std::cout << "Zeroes:" << std::endl;
 	Zeroes z("juggling_with_zeros/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef SPLITNUMBER
+	std::cout << "Split the number:" << std::endl;
+	split_the_number stn("split_the_number/test.txt");
 	std::cout << std::endl;
 #endif
 
