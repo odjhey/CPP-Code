@@ -20,19 +20,12 @@ StringRotation::StringRotation(const char *file)
 	{
 		std::vector<std::string> info = split(line, ',');
 		if(info[0].size() != info[1].size())
-		{
 			std::cout << "False" << std::endl;
-		}
-		else
-		{
+		else {
 			if((info[0] + info[0]).find(info[1]) != std::string::npos)
-			{
 				std::cout << "True" << std::endl;
-			}
 			else
-			{
 				std::cout << "False" << std::endl;
-			}
 		}
 	}
 }
