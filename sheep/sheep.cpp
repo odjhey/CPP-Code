@@ -46,21 +46,13 @@ void Sheep::dfs(const std::vector<std::vector<char> > &grid, std::vector<std::ve
 		visited[x][y] = true;
 
 		if(x-1 >= 0 && !visited[x-1][y])
-		{
 			dfs(grid, visited, x-1, y);
-		}
 		if(x+1 < grid.size() && !visited[x+1][y])
-		{
 			dfs(grid, visited, x+1, y);
-		}
 		if(y-1 >= 0 && !visited[x][y-1])
-		{
 			dfs(grid, visited, x, y-1);
-		}
 		if(y+1 < grid[x].size() && !visited[x][y+1])
-		{
 			dfs(grid, visited, x, y+1);
-		}
 	}
 }
 
@@ -86,9 +78,7 @@ Sheep::Sheep(const char *file)
 		{
 			getline(stream, line);
 			for(int y = 0; y < HEIGHT; y++)
-			{
 				grid[x][y] = line[y];
-			}
 		}
 
 		dfs(grid, visited);
