@@ -38,9 +38,14 @@
 #include "juggling_with_zeros/zeroes.h"
 #endif
 
-#if 1
+#if 0
 #define SPLITNUMBER
 #include "split_the_number/splitthenumber.h"
+#endif
+
+#if 1
+#define PREFIX_EXPRESSION
+#include "prefix_expression/prefixexpression.h"
 #endif
 
 #if 0
@@ -130,6 +135,12 @@ int main(int argc, char *argv[])
 #ifdef SPLITNUMBER
 	std::cout << "Split the number:" << std::endl;
 	split_the_number stn("split_the_number/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef PREFIX_EXPRESSION
+	std::cout << "Prefix Expression:" << std::endl;
+	prefix_expression pe("prefix_expression/test.txt");
 	std::cout << std::endl;
 #endif
 
