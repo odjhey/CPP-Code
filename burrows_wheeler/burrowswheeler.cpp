@@ -19,7 +19,7 @@ BurrowsWheeler::BurrowsWheeler(const char *file)
 
 	while(getline(stream, line))
 	{
-		std::cout << unpack(line.substr(0,line.size()-1), '$') << std::endl;
+		std::cout << unpack(line.substr(0,line.size() - 1), '$') << std::endl;
 	}
 }
 
@@ -42,7 +42,7 @@ std::string BurrowsWheeler::get_bwt(const std::vector<std::string> &vec)
 	std::size_t text_size = vec[0].size();
 	for(std::size_t i = 0; i != vec.size(); ++i)
 	{
-		bwt += vec[i][text_size-1];
+		bwt += vec[i][text_size - 1];
 	}
 	return bwt;
 }

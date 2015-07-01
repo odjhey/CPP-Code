@@ -43,7 +43,7 @@
 #include "split_the_number/splitthenumber.h"
 #endif
 
-#if 1
+#if 0
 #define PREFIX_EXPRESSION
 #include "prefix_expression/prefixexpression.h"
 #endif
@@ -68,6 +68,10 @@
 #include "mayan/mayan.h"
 #endif
 
+#if 1
+#define COINS
+#include "coins/coins.h"
+#endif
 
 int main(int argc, char *argv[])
 {
@@ -141,6 +145,12 @@ int main(int argc, char *argv[])
 #ifdef PREFIX_EXPRESSION
 	std::cout << "Prefix Expression:" << std::endl;
 	prefix_expression pe("prefix_expression/test.txt");
+	std::cout << std::endl;
+#endif
+
+#ifdef COINS
+	std::cout << "Coins:" << std::endl;
+	Coins coins("coins/test.txt");
 	std::cout << std::endl;
 #endif
 
