@@ -54,7 +54,7 @@ std::string BurrowsWheeler::pack(const std::string &text)
 	return get_bwt(rotations);
 }
 
-// Works, but slooooooow
+// Works, but slooooooow..
 std::string BurrowsWheeler::unpack(const std::string &bwt, const char char_EOF)
 {
 	std::size_t decrypted_pos = bwt.find(char_EOF);
